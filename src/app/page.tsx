@@ -13,7 +13,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { BenefitsBar } from "@/components/sections/BenefitsBar";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { WhatsAppFloat } from "@/components/sections/WhatsAppFloat";
-import { PurchaseToast } from "@/components/sections/PurchaseToast";
+import { WelcomeOffer } from "@/components/sections/WelcomeOffer";
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
       <BenefitsBar />
       <FooterSection />
       <WhatsAppFloat />
-      <PurchaseToast />
+      <WelcomeOffer />
     </>
   );
 }

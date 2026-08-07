@@ -14,7 +14,7 @@ export function HeaderSection() {
   return (
     <div className="sticky top-0 z-50">
       <p className="bg-[var(--an-ink)] text-[var(--an-gold-light)] text-center text-[10px] md:text-[11px] uppercase tracking-[0.22em] py-2 px-4">
-        Wear what moves you! · Cash on delivery · All of Lebanon
+        Free delivery over $75 · Cash on delivery · All of Lebanon
       </p>
 
       <header className="relative bg-[var(--an-cream)]/95 backdrop-blur border-b border-black/10">

@@ -46,8 +46,8 @@ export function BrandStory() {
         <div className="grid grid-cols-2 gap-4">
           <div className="relative aspect-[3/4] rounded-[10px] overflow-hidden col-span-2 md:col-span-1 md:mt-10">
             <Image
-              src="/images/whyknot/green-shirt.jpg"
-              alt="Kelly green cropped shirt"
+              src="/images/whyknot/mimoto-crowd-shirt-black.jpg"
+              alt="Mimoto crowd-print shirt, made in Japan"
               fill
               sizes="(max-width: 768px) 100vw, 25vw"
               className="object-cover"
@@ -55,8 +55,8 @@ export function BrandStory() {
           </div>
           <div className="relative aspect-[3/4] rounded-[10px] overflow-hidden hidden md:block">
             <Image
-              src="/images/whyknot/accessories-flatlay.jpg"
-              alt="Colorful knit and woven accessories flat lay"
+              src="/images/whyknot/silk-mint-back.jpg"
+              alt="Pure silk maxi, back detail"
               fill
               sizes="25vw"
               className="object-cover"

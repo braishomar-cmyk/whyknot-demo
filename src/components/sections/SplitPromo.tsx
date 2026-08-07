@@ -6,8 +6,8 @@ export function SplitPromo() {
       <div className="container-gp grid md:grid-cols-2 gap-10 items-center">
         <div className="relative rounded-[10px] aspect-[4/5] max-h-[600px] w-full overflow-hidden">
           <Image
-            src="/images/whyknot/leopard-skirt.jpg"
-            alt="Leopard midi skirt styled with a black top"
+            src="/images/whyknot/positano-maxi-fuchsia.jpg"
+            alt="The Positano Maxi in fuchsia paisley"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
