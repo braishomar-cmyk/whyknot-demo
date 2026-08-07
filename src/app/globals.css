@@ -269,6 +269,16 @@
     animation: watermarkIn 1.6s ease-out 0.2s forwards;
   }
 
+  /* Infinite right-to-left announcement ticker */
+  .marquee-banner {
+    display: flex;
+    width: max-content;
+    animation: marquee 34s linear infinite;
+  }
+  .marquee-banner:hover {
+    animation-play-state: paused;
+  }
+
   /* Auto-gliding product card marquee */
   .marquee-track {
     display: flex;
@@ -285,7 +295,8 @@
       opacity: 1;
       transform: none;
     }
-    .marquee-track {
+    .marquee-track,
+    .marquee-banner {
       animation: none;
     }
   }
