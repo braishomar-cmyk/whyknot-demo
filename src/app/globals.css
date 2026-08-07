@@ -93,15 +93,16 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* Whyknot Clothing palette: white canvas, wordmark black, kelly green pop, warm boho accents */
-  --an-cream: #fdfaf4;
-  --an-sand: #f6f0e4;
+  /* Whyknot Clothing palette: warm ivory canvas, wordmark black, terracotta accent
+     drawn from their own photography (clay pots, coral prints, sunset light) */
+  --an-cream: #fcf8f2;
+  --an-sand: #f4ece1;
   --an-ink: #1c1c1c;
   --an-olive: #333333;
   --an-olive-deep: #1c1c1c;
-  --an-gold: #2f9e44;
-  --an-gold-light: #b3e2bd;
-  --an-terra: #e0763f;
+  --an-gold: #b0603c;
+  --an-gold-light: #e6c3a8;
+  --an-terra: #c97a4e;
   --an-wa: #1fb355;
 }
 
