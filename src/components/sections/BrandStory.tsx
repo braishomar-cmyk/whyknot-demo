@@ -3,9 +3,9 @@ import { PLAN_LINK } from "@/lib/content";
 import { WhatsAppIcon } from "@/components/icons";
 
 const STATS = [
-  { value: "12+", label: "Years of craft" },
-  { value: "5k+", label: "Pieces delivered" },
-  { value: "100%", label: "Made with intent" },
+  { value: "2", label: "Countries curated" },
+  { value: "220+", label: "Looks shared" },
+  { value: "100%", label: "Chosen with love" },
 ];
 
 export function BrandStory() {
@@ -17,13 +17,13 @@ export function BrandStory() {
             Our Story
           </p>
           <h2 className="font-display text-[30px] md:text-[46px] leading-[1.12] font-medium mt-5">
-            Fashion that respects{" "}
-            <em className="italic text-[var(--an-gold-light)]">the quiet</em> in every morning
+            Why dress <em className="italic text-[var(--an-gold-light)]">boring</em> when you
+            could dress <em className="italic text-[var(--an-gold-light)]">you</em>?
           </h2>
           <p className="mt-6 text-[14.5px] leading-relaxed text-[var(--an-cream)]/70 max-w-[480px]">
-            Atelier began with a simple belief: getting dressed should be the easiest decision of
-            the day. We make a small number of pieces, make them well, and deliver them anywhere
-            in Lebanon.
+            Whyknot started with a simple question: why dress boring? We hunt down small-batch
+            pieces from Italy and Japan, add designs from our own collection, and deliver them
+            anywhere in Lebanon. When a piece is gone, it&apos;s gone.
           </p>
           <div className="mt-8">
             <a className="btn-wa" href={PLAN_LINK} target="_blank" rel="noreferrer">
@@ -46,8 +46,8 @@ export function BrandStory() {
         <div className="grid grid-cols-2 gap-4">
           <div className="relative aspect-[3/4] rounded-[10px] overflow-hidden col-span-2 md:col-span-1 md:mt-10">
             <Image
-              src="/images/fashion/story-fabric.jpg"
-              alt="Draped sage wool fabric"
+              src="/images/whyknot/green-shirt.jpg"
+              alt="Kelly green cropped shirt"
               fill
               sizes="(max-width: 768px) 100vw, 25vw"
               className="object-cover"
@@ -55,8 +55,8 @@ export function BrandStory() {
           </div>
           <div className="relative aspect-[3/4] rounded-[10px] overflow-hidden hidden md:block">
             <Image
-              src="/images/fashion/story-hangers.jpg"
-              alt="Silk blouses on wooden hangers"
+              src="/images/whyknot/accessories-flatlay.jpg"
+              alt="Colorful knit and woven accessories flat lay"
               fill
               sizes="25vw"
               className="object-cover"

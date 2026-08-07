@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { PRODUCTS } from "@/lib/content";
 
 // Base URL switches to the client's domain at launch.
-const BASE_URL = "https://demo-clothing.vercel.app";
+const BASE_URL = "https://whyknot-demo.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

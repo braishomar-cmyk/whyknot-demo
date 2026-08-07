@@ -21,15 +21,15 @@ export function HeroShowcase() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-[8%] flex justify-center anim-watermark"
       >
-        <span className="font-display uppercase font-medium tracking-[0.12em] text-[22vw] leading-none text-[#d9cbb4]/60 select-none">
-          Atelier
+        <span className="font-display lowercase font-black text-[20vw] leading-none text-[#e8ddc7]/70 select-none">
+          whyknot.
         </span>
       </div>
 
       <div className="container-gp relative pt-10 md:pt-14 text-center">
-        <p className="pill-badge anim-fade-up">The Winter Edit</p>
-        <h1 className="font-display text-[34px] md:text-[54px] leading-[1.08] font-medium mt-5 max-w-[680px] mx-auto anim-fade-up anim-delay-1">
-          Dress for the life you <em className="italic text-[var(--an-gold)]">actually live</em>
+        <p className="pill-badge anim-fade-up">New Drop · One Size · Made in Italy &amp; Japan</p>
+        <h1 className="font-display text-[36px] md:text-[58px] leading-[1.05] font-black mt-5 max-w-[680px] mx-auto anim-fade-up anim-delay-1">
+          Wear what <em className="italic text-[var(--an-gold)] font-semibold">moves</em> you!
         </h1>
         <div className="mt-6 flex gap-4 justify-center flex-wrap anim-fade-up anim-delay-2">
           <a className="btn-solid" href="#shop">
@@ -42,8 +42,8 @@ export function HeroShowcase() {
 
         <div className="relative mx-auto mt-8 w-[300px] md:w-[380px] aspect-[3/4] z-10 anim-fade-up anim-delay-3">
           <Image
-            src="/images/fashion/hero-main.jpg"
-            alt="Sage green quilted jacket from the winter edit"
+            src="/images/whyknot/boho-dress.jpg"
+            alt="Boho maxi dress from the Whyknot collection"
             fill
             priority
             sizes="380px"

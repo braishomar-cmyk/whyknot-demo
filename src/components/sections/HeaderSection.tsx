@@ -13,7 +13,7 @@ export function HeaderSection() {
   return (
     <div className="sticky top-0 z-50">
       <p className="bg-[var(--an-ink)] text-[var(--an-gold-light)] text-center text-[10px] md:text-[11px] uppercase tracking-[0.22em] py-2 px-4">
-        Free delivery over $75 · Cash on delivery · Easy exchanges
+        Wear what moves you! · Cash on delivery · All of Lebanon
       </p>
 
       <header className="relative bg-[var(--an-cream)]/95 backdrop-blur border-b border-black/10">
@@ -31,9 +31,11 @@ export function HeaderSection() {
 
           <Link
             href="/"
-            className="justify-self-center font-display text-[26px] md:text-[30px] font-semibold tracking-[0.22em] uppercase"
+            className="justify-self-center font-display font-black text-[26px] md:text-[30px] leading-none lowercase text-center"
           >
-            Atelier
+            why
+            <br />
+            knot<span className="text-[var(--an-gold)]">.</span>
           </Link>
 
           <div className="justify-self-end flex items-center gap-5">

@@ -6,7 +6,7 @@ export function VideoBanner() {
   return (
     <section className="relative overflow-hidden py-24 md:py-32 text-center text-white">
       <Image
-        src="/images/fashion/journal-flatlay.jpg"
+        src="/images/whyknot/accessories-flatlay.jpg"
         alt=""
         aria-hidden
         fill

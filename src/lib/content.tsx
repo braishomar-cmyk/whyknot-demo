@@ -1,20 +1,21 @@
-export const BUSINESS_NAME = "Atelier";
-export const WHATSAPP_NUMBER = "96170000000";
-export const INSTAGRAM_URL = "https://www.instagram.com/";
-export const INSTAGRAM_HANDLE = "@atelier.lb";
-export const LOCATION = "Beirut, Lebanon";
+export const BUSINESS_NAME = "Whyknot Clothing";
+export const WHATSAPP_NUMBER = "9613057408";
+export const INSTAGRAM_URL = "https://www.instagram.com/whyknotclothing_lb";
+export const INSTAGRAM_HANDLE = "@whyknotclothing_lb";
+export const LOCATION = "Lebanon";
+export const TAGLINE = "Wear what moves you!";
 
 export function waLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-export const PLAN_LINK = waLink("Hello! I'd like to order from your collection ✨");
+export const PLAN_LINK = waLink("Hello Whyknot! I'd like to order from your collection ✨");
 
 export const NAV_LINKS = [
   { label: "New In", href: "#shop" },
   { label: "Dresses", href: "#shop" },
-  { label: "Outerwear", href: "#shop" },
-  { label: "Accessories", href: "#shop" },
+  { label: "Tees", href: "#shop" },
+  { label: "One Size", href: "#shop" },
   { label: "Our Story", href: "#story" },
   { label: "Contact", href: "/contact" },
 ];
@@ -42,14 +43,14 @@ export type Product = {
 };
 
 export const SIZE_GUIDE = [
-  { size: "XS", bust: "82", waist: "62", hips: "88" },
+  { size: "One Size", bust: "84-102", waist: "64-84", hips: "90-108" },
   { size: "S", bust: "86", waist: "66", hips: "92" },
   { size: "M", bust: "90", waist: "70", hips: "96" },
   { size: "L", bust: "96", waist: "76", hips: "102" },
-  { size: "XL", bust: "102", waist: "82", hips: "108" },
 ];
 
-const STANDARD_SIZES = ["XS", "S", "M", "L", "XL"];
+const ONE_SIZE = ["One Size"];
+const STANDARD_SIZES = ["S", "M", "L"];
 
 export type FeaturedCategory = {
   name: string;
@@ -60,186 +61,175 @@ export type FeaturedCategory = {
 
 export const FEATURED_CATEGORIES: FeaturedCategory[] = [
   {
-    name: "Outerwear",
-    piece: "The Quilted Coat",
-    startFrom: "$120",
-    image: "/images/fashion/cat-outerwear.jpg",
-  },
-  {
-    name: "Knitwear",
-    piece: "Soft Chunky Knits",
-    startFrom: "$45",
-    image: "/images/fashion/cat-knitwear.jpg",
-  },
-  {
-    name: "Trousers",
-    piece: "Wide-Leg Trousers",
-    startFrom: "$60",
-    image: "/images/fashion/cat-trousers.jpg",
-  },
-  {
     name: "Dresses",
-    piece: "Silk & Linen Dresses",
-    startFrom: "$72",
-    image: "/images/fashion/cat-dresses.jpg",
+    piece: "Boho Dresses",
+    startFrom: "$45",
+    image: "/images/whyknot/boho-dress.jpg",
+  },
+  {
+    name: "Tees",
+    piece: "Statement Tees",
+    startFrom: "$25",
+    image: "/images/whyknot/sun-tee.jpg",
+  },
+  {
+    name: "Shirts",
+    piece: "Color-Pop Shirts",
+    startFrom: "$35",
+    image: "/images/whyknot/green-shirt.jpg",
+  },
+  {
+    name: "One Size",
+    piece: "Made in Italy & Japan",
+    startFrom: "$30",
+    image: "/images/whyknot/linen-shirt.jpg",
   },
 ];
 
 export const PRODUCTS: Product[] = [
   {
-    slug: "sage-slip-dress",
-    name: "Sage Slip Dress",
+    slug: "boho-maxi-dress",
+    name: "Boho Maxi Dress",
     category: "Dresses",
-    price: "$95",
-    compareAtPrice: "$120",
-    tone: "#8c9a8f",
-    toneTo: "#6d7a6f",
-    orderMessage: "Hello! I'd like to order the Sage Slip Dress. Which sizes are available?",
-    tag: "Sale",
-    image: "/images/fashion/product-sage-dress.jpg",
+    price: "$55",
+    tone: "#7ba05b",
+    toneTo: "#a8c686",
+    orderMessage: "Hello Whyknot! I'd like to order the Boho Maxi Dress. Is it available?",
+    tag: "Our Collection",
+    image: "/images/whyknot/boho-dress.jpg",
     description:
-      "Cut on the bias so it moves the way silk should, with adjustable straps and a soft cowl neckline. The dress that goes from lunch to late without trying.",
-    fabric: "92% silk, 8% elastane. Cool hand wash, hang to dry.",
+      "From our own collection: a flowing maxi in a joyful print that moves with every step. Throw it on with sandals and you're dressed.",
+    fabric: "100% viscose. Machine wash cold, hang to dry.",
     colors: [
-      { name: "Sage", hex: "#8c9a8f" },
-      { name: "Ivory", hex: "#efe9dd" },
-      { name: "Midnight", hex: "#2c3441" },
+      { name: "Garden Print", hex: "#7ba05b" },
+      { name: "Sunset Print", hex: "#e0763f" },
     ],
-    sizes: STANDARD_SIZES,
+    sizes: ONE_SIZE,
   },
   {
-    slug: "linen-wrap-dress",
-    name: "Linen Wrap Dress",
-    category: "Dresses",
-    price: "$72",
-    tone: "#c8b9a4",
-    toneTo: "#a8977e",
-    orderMessage: "Hello! I'd like to order the Linen Wrap Dress. Which sizes are available?",
-    image: "/images/fashion/product-wrap-dress.jpg",
-    description:
-      "A true wrap in breathable washed linen, with a self-tie waist that flatters every figure. Wrinkles beautifully, like linen is supposed to.",
-    fabric: "100% washed linen. Machine wash cold, gentle cycle.",
-    colors: [
-      { name: "Cream", hex: "#e7dcc8" },
-      { name: "Sage", hex: "#8c9a8f" },
-      { name: "Terracotta", hex: "#b0714f" },
-    ],
-    sizes: STANDARD_SIZES,
-  },
-  {
-    slug: "structured-blazer",
-    name: "Structured Blazer",
-    category: "New In",
-    price: "$110",
-    tone: "#3b3f46",
-    toneTo: "#5a606b",
-    orderMessage: "Hello! I'd like to order the Structured Blazer. Which sizes are available?",
-    tag: "New",
-    image: "/images/fashion/product-blazer.jpg",
-    description:
-      "Sharp shoulders, relaxed body, single button. Built to sit as well over a tee as it does over a slip dress.",
-    fabric: "64% polyester, 34% viscose, 2% elastane. Dry clean.",
-    colors: [
-      { name: "Charcoal", hex: "#3b3f46" },
-      { name: "Oat", hex: "#d8cfc2" },
-    ],
-    sizes: STANDARD_SIZES,
-  },
-  {
-    slug: "ribbed-longsleeve",
-    name: "Ribbed Longsleeve",
+    slug: "mimoto-one-size-tee",
+    name: "Mimoto One-Size Tee",
     category: "Tops",
-    price: "$49",
-    tone: "#5a708a",
-    toneTo: "#7d92aa",
-    orderMessage: "Hello! I'd like to order the Ribbed Longsleeve. Which sizes are available?",
-    image: "/images/fashion/product-slate-top.jpg",
+    price: "$28",
+    tone: "#f4f2ee",
+    toneTo: "#d9d5cd",
+    orderMessage: "Hello Whyknot! I'd like to order the Mimoto One-Size Tee. Is it available?",
+    tag: "Made in Japan",
+    image: "/images/whyknot/sun-tee.jpg",
     description:
-      "A second-skin rib that holds its shape wash after wash. High neck, long cuffs, endless layering.",
-    fabric: "95% cotton, 5% elastane. Machine wash cold.",
-    colors: [
-      { name: "Slate", hex: "#5a708a" },
-      { name: "Ivory", hex: "#efe9dd" },
-      { name: "Black", hex: "#232323" },
-    ],
-    sizes: STANDARD_SIZES,
-  },
-  {
-    slug: "everyday-knit",
-    name: "Everyday Knit",
-    category: "Tops",
-    price: "$45",
-    tone: "#d8cfc2",
-    toneTo: "#b8ab99",
-    orderMessage: "Hello! I'd like to order the Everyday Knit. Which sizes are available?",
-    image: "/images/fashion/product-oatmeal-knit.jpg",
-    description:
-      "The chunky crew you reach for without thinking. Soft-spun yarn, dropped shoulders, zero itch.",
-    fabric: "70% acrylic, 30% wool. Hand wash, dry flat.",
-    colors: [
-      { name: "Oatmeal", hex: "#d8cfc2" },
-      { name: "Blush", hex: "#e3c2bb" },
-      { name: "Sage", hex: "#8c9a8f" },
-    ],
-    sizes: STANDARD_SIZES,
-  },
-  {
-    slug: "square-neck-tank",
-    name: "Square-Neck Tank",
-    category: "Tops",
-    price: "$32",
-    tone: "#eae6df",
-    toneTo: "#c9c2b6",
-    orderMessage: "Hello! I'd like to order the Square-Neck Tank. Which sizes are available?",
-    image: "/images/fashion/product-tank.jpg",
-    description:
-      "A clean square neckline in thick ribbed cotton that doesn't go sheer. The base layer of every capsule.",
-    fabric: "95% cotton, 5% elastane. Machine wash cold.",
+      "Japanese-made cotton in a relaxed one-size cut that drapes right on everybody. Soft, breathable, and impossible to wear just once a week.",
+    fabric: "100% Japanese cotton. Machine wash cold.",
     colors: [
       { name: "White", hex: "#f4f2ee" },
-      { name: "Black", hex: "#232323" },
-      { name: "Mocha", hex: "#8a7361" },
+      { name: "Black", hex: "#1c1c1c" },
     ],
-    sizes: STANDARD_SIZES,
+    sizes: ONE_SIZE,
   },
   {
-    slug: "the-quilted-coat",
-    name: "The Quilted Coat",
+    slug: "mimoto-shirt",
+    name: "Mimoto One-Size Shirt",
+    category: "Tops",
+    price: "$38",
+    tone: "#8fb4c9",
+    toneTo: "#b5cedd",
+    orderMessage: "Hello Whyknot! I'd like to order the Mimoto One-Size Shirt. Is it available?",
+    tag: "Made in Japan",
+    image: "/images/whyknot/linen-shirt.jpg",
+    description:
+      "An easy oversized shirt from Mimoto that works buttoned, open, tied or tucked. One size, endless ways to wear it.",
+    fabric: "Cotton blend. Machine wash cold, low iron.",
+    colors: [
+      { name: "White", hex: "#f4f2ee" },
+      { name: "Sky", hex: "#8fb4c9" },
+    ],
+    sizes: ONE_SIZE,
+  },
+  {
+    slug: "kelly-green-shirt",
+    name: "Kelly Green Cropped Shirt",
     category: "New In",
-    price: "$160",
-    tone: "#8f9e83",
-    toneTo: "#a9b59e",
-    orderMessage: "Hello! I'd like to order The Quilted Coat. Which sizes are available?",
+    price: "$42",
+    tone: "#2f9e44",
+    toneTo: "#5cb85c",
+    orderMessage: "Hello Whyknot! I'd like to order the Kelly Green Cropped Shirt. Which sizes are available?",
     tag: "New",
-    image: "/images/fashion/cat-outerwear.jpg",
+    image: "/images/whyknot/green-shirt.jpg",
     description:
-      "Diamond-quilted warmth without the bulk, hitting below the knee. The coat that makes every outfit underneath optional.",
-    fabric: "Shell 100% recycled nylon, fill 100% recycled polyester. Machine wash cold.",
+      "The green that started conversations. A cropped button-up in a color that makes jeans look intentional.",
+    fabric: "Cotton poplin. Machine wash cold.",
     colors: [
-      { name: "Sage", hex: "#8f9e83" },
-      { name: "Stone", hex: "#c9c2b6" },
-      { name: "Black", hex: "#232323" },
+      { name: "Kelly Green", hex: "#2f9e44" },
+      { name: "White", hex: "#f4f2ee" },
     ],
     sizes: STANDARD_SIZES,
   },
   {
-    slug: "wide-leg-trousers",
-    name: "Wide-Leg Trousers",
-    category: "New In",
-    price: "$68",
-    tone: "#a99cc0",
-    toneTo: "#c3b8d6",
-    orderMessage: "Hello! I'd like to order the Wide-Leg Trousers. Which sizes are available?",
-    image: "/images/fashion/cat-trousers.jpg",
+    slug: "sequin-eye-tee",
+    name: "Statement Eye Tee",
+    category: "Tops",
+    price: "$32",
+    tone: "#3aa8a0",
+    toneTo: "#6cc5be",
+    orderMessage: "Hello Whyknot! I'd like to order the Statement Eye Tee. Is it available?",
+    tag: "Bestseller",
+    image: "/images/whyknot/sun-tee.jpg",
     description:
-      "High-waisted, pleated, and fluid, with a drape that reads tailored from across the room and pajamas from the inside.",
-    fabric: "78% viscose, 22% polyester. Machine wash cold, low iron.",
+      "Our most-loved graphic tee, hand-finished with a shimmering motif that catches light and compliments all day.",
+    fabric: "100% cotton with hand-applied embellishment. Gentle hand wash inside out.",
     colors: [
-      { name: "Lavender", hex: "#a99cc0" },
-      { name: "Cream", hex: "#e7dcc8" },
-      { name: "Charcoal", hex: "#3b3f46" },
+      { name: "White", hex: "#f4f2ee" },
+      { name: "Black", hex: "#1c1c1c" },
     ],
+    sizes: ONE_SIZE,
+  },
+  {
+    slug: "leopard-midi-skirt",
+    name: "Leopard Midi Skirt",
+    category: "New In",
+    price: "$48",
+    tone: "#b98a3c",
+    toneTo: "#8a6b34",
+    orderMessage: "Hello Whyknot! I'd like to order the Leopard Midi Skirt. Which sizes are available?",
+    image: "/images/whyknot/leopard-skirt.jpg",
+    description:
+      "A little wild, a lot wearable. Fluid midi length with an elastic waist that goes from desk to dinner.",
+    fabric: "Viscose blend. Machine wash cold.",
+    colors: [{ name: "Leopard", hex: "#b98a3c" }],
     sizes: STANDARD_SIZES,
+  },
+  {
+    slug: "made-in-italy-set",
+    name: "Made in Italy One-Size Set",
+    category: "New In",
+    price: "$65",
+    tone: "#e0763f",
+    toneTo: "#eda06f",
+    orderMessage: "Hello Whyknot! I'd like to order the Made in Italy One-Size Set. Is it available?",
+    tag: "Made in Italy",
+    image: "/images/whyknot/boho-dress.jpg",
+    description:
+      "Italian fabric, easy silhouette, zero guesswork. A matching set that packs like a dream and wears like a hug.",
+    fabric: "Italian viscose blend. Machine wash cold.",
+    colors: [
+      { name: "Print", hex: "#e0763f" },
+      { name: "Solid Cream", hex: "#efe7d8" },
+    ],
+    sizes: ONE_SIZE,
+  },
+  {
+    slug: "beach-day-accessories",
+    name: "Beach Day Accessories",
+    category: "Accessories",
+    price: "$22",
+    tone: "#d9c290",
+    toneTo: "#c2a468",
+    orderMessage: "Hello Whyknot! I'd like to order the Beach Day Accessories. What do you have in stock?",
+    image: "/images/whyknot/accessories-flatlay.jpg",
+    description:
+      "Woven, beaded and sun-ready. The finishing touches that turn an outfit into a mood.",
+    fabric: "Mixed natural materials.",
+    colors: [{ name: "Natural", hex: "#d9c290" }],
+    sizes: ONE_SIZE,
   },
 ];
 
@@ -253,32 +243,32 @@ export type Reel = {
 
 export const REELS: Reel[] = [
   {
-    title: "Styled 3 ways",
-    product: "Sage Knit Set",
-    price: "$89",
-    orderMessage: "Hello! I saw the Sage Knit Set in your video. Which sizes are available?",
-    image: "/images/fashion/reel-walk.jpg",
+    title: "Twirl test",
+    product: "Boho Maxi Dress",
+    price: "$55",
+    orderMessage: "Hello Whyknot! I saw the Boho Maxi Dress in your video. Is it available?",
+    image: "/images/whyknot/boho-dress.jpg",
   },
   {
-    title: "Cozy season",
-    product: "Everyday Knit",
-    price: "$45",
-    orderMessage: "Hello! I saw the Everyday Knit in your video. Which sizes are available?",
-    image: "/images/fashion/reel-seated.jpg",
+    title: "One size, really",
+    product: "Mimoto One-Size Tee",
+    price: "$28",
+    orderMessage: "Hello Whyknot! I saw the Mimoto Tee in your video. Is it available?",
+    image: "/images/whyknot/sun-tee.jpg",
   },
   {
-    title: "The perfect drape",
-    product: "Sage Slip Dress",
-    price: "$95",
-    orderMessage: "Hello! I saw the Sage Slip Dress in your video. Which sizes are available?",
-    image: "/images/fashion/product-sage-dress.jpg",
+    title: "That green",
+    product: "Kelly Green Shirt",
+    price: "$42",
+    orderMessage: "Hello Whyknot! I saw the Kelly Green Shirt in your video. Which sizes are available?",
+    image: "/images/whyknot/green-shirt.jpg",
   },
   {
-    title: "From day to night",
-    product: "Structured Blazer",
-    price: "$110",
-    orderMessage: "Hello! I saw the Structured Blazer in your video. Which sizes are available?",
-    image: "/images/fashion/product-blazer.jpg",
+    title: "Wild card",
+    product: "Leopard Midi Skirt",
+    price: "$48",
+    orderMessage: "Hello Whyknot! I saw the Leopard Midi Skirt in your video. Which sizes are available?",
+    image: "/images/whyknot/leopard-skirt.jpg",
   },
 ];
 
@@ -289,10 +279,14 @@ export type StyleCategory = {
 };
 
 export const STYLES: StyleCategory[] = [
-  { name: "Workwear", blurb: "Sharp, easy, all day", image: "/images/fashion/product-blazer.jpg" },
-  { name: "Weekend", blurb: "Soft layers, no effort", image: "/images/fashion/cat-knitwear.jpg" },
-  { name: "Evening", blurb: "Quiet drama", image: "/images/fashion/cat-dresses.jpg" },
-  { name: "Essentials", blurb: "The everyday base", image: "/images/fashion/journal-flatlay.jpg" },
+  { name: "Boho Days", blurb: "Flowy, printed, free", image: "/images/whyknot/boho-dress.jpg" },
+  { name: "Statement", blurb: "Tees that talk", image: "/images/whyknot/sun-tee.jpg" },
+  { name: "Color Pop", blurb: "Wear the bold thing", image: "/images/whyknot/green-shirt.jpg" },
+  {
+    name: "Easy Pieces",
+    blurb: "One size, all you",
+    image: "/images/whyknot/linen-shirt.jpg",
+  },
 ];
 
 export type Testimonial = {
@@ -303,18 +297,18 @@ export type Testimonial = {
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "The quality surprised me. The coat feels like it costs three times the price, and ordering on WhatsApp took two minutes.",
-    who: "Lara M.",
+      "The one-size pieces actually fit beautifully. I ordered on WhatsApp in the morning and wore the dress that weekend.",
+    who: "Maya K.",
   },
   {
     quote:
-      "I ordered the wrap dress for an event and ended up wearing it every week since. True to size and beautifully made.",
-    who: "Yasmina K.",
+      "Quality you can feel, the Japanese tee is the softest thing I own. And the colors are even better in person.",
+    who: "Nour H.",
   },
   {
     quote:
-      "Fast delivery, lovely packaging, and the blazer fits like it was tailored for me. Already planning my next order.",
-    who: "Rania S.",
+      "Finally a Lebanese page with pieces nobody else has. Fast replies, fast delivery, zero complications.",
+    who: "Rita S.",
   },
 ];
 
@@ -325,26 +319,30 @@ export type Faq = {
 
 export const FAQS: Faq[] = [
   {
-    q: "How do I order?",
-    a: "Tap any Order button and a WhatsApp chat opens with the piece already named. Tell us your size, confirm delivery, and it's on the way.",
+    q: "How does one-size fit work?",
+    a: "Our one-size pieces are cut relaxed and flowy on purpose, designed in Italy and Japan to drape beautifully on most figures. Not sure? Send us your usual size on WhatsApp and we'll tell you honestly how it fits.",
   },
   {
-    q: "How do I know my size?",
-    a: "Every piece has a size guide, and we're happy to advise on WhatsApp. Tell us your usual size and we'll confirm the right fit before you order.",
+    q: "How do I order?",
+    a: "Tap any Order button and a WhatsApp chat opens with the piece already named. Confirm your choice, share your delivery details, and it's on the way.",
   },
   {
     q: "Do you deliver everywhere in Lebanon?",
-    a: "Yes, we deliver across Lebanon within 2 to 4 working days, with cash on delivery.",
+    a: "Yes, we deliver across Lebanon with cash on delivery. Delivery usually takes 2 to 4 working days.",
   },
   {
-    q: "What if it doesn't fit?",
-    a: "Easy exchanges within 7 days. Message us on WhatsApp and we'll arrange the swap.",
+    q: "Where are your pieces from?",
+    a: "We curate small quantities from makers in Italy and Japan, alongside pieces from our own collection. When it's gone, it's gone.",
+  },
+  {
+    q: "What if it doesn't suit me?",
+    a: "Message us within 3 days and we'll arrange an exchange. We want you wearing it, not storing it.",
   },
 ];
 
 export const BENEFITS = [
-  { title: "Free Delivery Over $75", text: "Everywhere in Lebanon" },
   { title: "Cash on Delivery", text: "Pay when it arrives" },
-  { title: "Easy Exchanges", text: "7 days, no drama" },
-  { title: "WhatsApp Support", text: "Real replies, fast" },
+  { title: "All of Lebanon", text: "Delivered in 2-4 days" },
+  { title: "Curated Small Batches", text: "Italy, Japan & our own line" },
+  { title: "WhatsApp First", text: "Real replies, fast" },
 ];

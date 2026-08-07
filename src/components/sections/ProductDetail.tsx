@@ -87,7 +87,7 @@ export function ProductDetail({ product }: { product: Product }) {
                 onClick={() => setGuideOpen(!guideOpen)}
                 className="text-[12px] underline underline-offset-4 decoration-[var(--an-gold)] hover:text-[var(--an-gold)] transition-colors"
               >
-                Size guide
+                {product.sizes.length === 1 ? "How one-size fits" : "Size guide"}
               </button>
             </div>
             <div className="flex flex-wrap gap-2 mt-3">
@@ -118,7 +118,10 @@ export function ProductDetail({ product }: { product: Product }) {
                     </tr>
                   </thead>
                   <tbody>
-                    {SIZE_GUIDE.map((row) => (
+                    {(product.sizes.length === 1
+                      ? SIZE_GUIDE.filter((r) => r.size === "One Size")
+                      : SIZE_GUIDE.filter((r) => r.size !== "One Size")
+                    ).map((row) => (
                       <tr key={row.size} className="border-t border-black/5">
                         <td className="py-2 font-semibold">{row.size}</td>
                         <td className="py-2 opacity-75">{row.bust}</td>

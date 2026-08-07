@@ -8,9 +8,9 @@ import { LOCATION, PLAN_LINK } from "@/lib/content";
 import { WhatsAppIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Contact | Atelier",
+  title: "Contact | Whyknot Clothing",
   description:
-    "Questions about sizing, delivery or a specific piece? Message Atelier on WhatsApp. Delivery across Lebanon, cash on delivery.",
+    "Questions about sizing, delivery or a specific piece? Message Whyknot on WhatsApp. Delivery across Lebanon, cash on delivery.",
 };
 
 export default function ContactPage() {

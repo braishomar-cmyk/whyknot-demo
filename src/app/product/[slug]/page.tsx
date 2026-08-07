@@ -18,9 +18,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = PRODUCTS.find((p) => p.slug === slug);
-  if (!product) return { title: "Atelier" };
+  if (!product) return { title: "Whyknot Clothing" };
   return {
-    title: `${product.name} | Atelier`,
+    title: `${product.name} | Whyknot Clothing`,
     description: `${product.description} Order on WhatsApp, delivered across Lebanon with cash on delivery.`,
   };
 }

@@ -14,11 +14,14 @@ export function FooterSection() {
       <div className="container-gp">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-[13px]">
           <div className="col-span-2 md:col-span-1">
-            <div className="font-display text-[24px] font-semibold tracking-[0.18em] uppercase">
-              Atelier
+            <div className="font-display text-[26px] font-black leading-none lowercase">
+              why
+              <br />
+              knot<span className="text-[var(--an-gold-light)]">.</span>
             </div>
             <p className="mt-3 text-[var(--an-cream)]/60 text-[12.5px]">
-              Considered womenswear, delivered across Lebanon.
+              Wear what moves you! Curated pieces from Italy, Japan and our own collection,
+              delivered across Lebanon.
             </p>
           </div>
           <div>

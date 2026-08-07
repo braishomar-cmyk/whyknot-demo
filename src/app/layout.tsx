@@ -1,40 +1,41 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Fraunces, Poppins } from "next/font/google";
 import "./globals.css";
 import { BUSINESS_NAME, FAQS, INSTAGRAM_URL, LOCATION, WHATSAPP_NUMBER } from "@/lib/content";
 
-const cormorant = Cormorant_Garamond({
+const fraunces = Fraunces({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "variable",
   style: ["normal", "italic"],
+  axes: ["SOFT"],
 });
 
-const montserrat = Montserrat({
+const poppins = Poppins({
   variable: "--font-jost",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Atelier | Modern Womenswear, Delivered Across Lebanon",
+  title: "Whyknot Clothing | Wear What Moves You",
   description:
-    "Considered womenswear made for real days: dresses, tailoring and everyday essentials. Order in two taps on WhatsApp, cash on delivery across Lebanon.",
+    "Curated one-size pieces from Italy and Japan, boho dresses and statement tees, chosen with love in Lebanon. Order in two taps on WhatsApp, cash on delivery.",
   openGraph: {
-    title: "Atelier | Modern Womenswear, Delivered Across Lebanon",
+    title: "Whyknot Clothing | Wear What Moves You",
     description:
-      "Considered womenswear made for real days. Order in two taps on WhatsApp, cash on delivery across Lebanon.",
+      "Curated one-size pieces from Italy and Japan, chosen with love in Lebanon. Order in two taps on WhatsApp, cash on delivery.",
     type: "website",
     locale: "en_US",
     siteName: BUSINESS_NAME,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Atelier | Modern Womenswear, Delivered Across Lebanon",
+    title: "Whyknot Clothing | Wear What Moves You",
     description:
-      "Considered womenswear made for real days. Order in two taps on WhatsApp, cash on delivery across Lebanon.",
+      "Curated one-size pieces from Italy and Japan, chosen with love in Lebanon. Order in two taps on WhatsApp, cash on delivery.",
   },
-  // Demo template: stays out of search indexes until rebranded and sold
+  // Demo site: stays out of search indexes until the client owns it on their domain
   robots: { index: false, follow: false },
 };
 
@@ -42,8 +43,9 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "ClothingStore",
   name: BUSINESS_NAME,
+  slogan: "Wear what moves you!",
   description:
-    "Modern womenswear: dresses, tailoring and everyday essentials, delivered across Lebanon with cash on delivery.",
+    "Curated womenswear boutique in Lebanon: one-size pieces from Italy and Japan, boho dresses and statement tees, delivered across Lebanon with cash on delivery.",
   telephone: `+${WHATSAPP_NUMBER}`,
   address: {
     "@type": "PostalAddress",
@@ -51,7 +53,7 @@ const storeSchema = {
     addressCountry: "LB",
   },
   areaServed: "Lebanon",
-  sameAs: [INSTAGRAM_URL],
+  sameAs: [INSTAGRAM_URL, "https://www.facebook.com/profile.php?id=61576469431236"],
 };
 
 const faqSchema = {
@@ -70,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${montserrat.variable} h-full antialiased`}>
+    <html lang="en" className={`${fraunces.variable} ${poppins.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"

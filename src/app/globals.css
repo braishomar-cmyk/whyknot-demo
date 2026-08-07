@@ -93,15 +93,15 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* Atelier clothing demo palette: warm cream canvas, sage accent, soft charcoal */
-  --an-cream: #f5efe4;
-  --an-sand: #efe7d8;
-  --an-ink: #232323;
-  --an-olive: #3a3a3a;
-  --an-olive-deep: #232323;
-  --an-gold: #8f9e83;
-  --an-gold-light: #cdd6c4;
-  --an-terra: #6b5748;
+  /* Whyknot Clothing palette: white canvas, wordmark black, kelly green pop, warm boho accents */
+  --an-cream: #fdfaf4;
+  --an-sand: #f6f0e4;
+  --an-ink: #1c1c1c;
+  --an-olive: #333333;
+  --an-olive-deep: #1c1c1c;
+  --an-gold: #2f9e44;
+  --an-gold-light: #b3e2bd;
+  --an-terra: #e0763f;
   --an-wa: #1fb355;
 }
 
