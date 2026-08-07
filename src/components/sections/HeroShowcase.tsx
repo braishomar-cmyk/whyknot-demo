@@ -42,8 +42,8 @@ export function HeroShowcase() {
 
         <div className="relative mx-auto mt-8 w-[300px] md:w-[380px] aspect-[3/4] z-10 anim-fade-up anim-delay-3">
           <Image
-            src="/images/whyknot/boho-dress.jpg"
-            alt="Boho maxi dress from the Whyknot collection"
+            src="/images/whyknot/santorini-maxi-coral.jpg"
+            alt="The Santorini Maxi from the Whyknot collection"
             fill
             priority
             sizes="380px"

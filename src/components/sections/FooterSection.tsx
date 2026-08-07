@@ -1,3 +1,4 @@
+﻿import Image from "next/image";
 import {
   BUSINESS_NAME,
   INSTAGRAM_HANDLE,
@@ -14,11 +15,13 @@ export function FooterSection() {
       <div className="container-gp">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-[13px]">
           <div className="col-span-2 md:col-span-1">
-            <div className="font-display text-[26px] font-black leading-none lowercase">
-              why
-              <br />
-              knot<span className="text-[var(--an-gold-light)]">.</span>
-            </div>
+            <Image
+              src="/images/logo-trimmed.png"
+              alt="Whyknot Clothing"
+              width={828}
+              height={401}
+              className="h-[58px] w-auto object-contain invert"
+            />
             <p className="mt-3 text-[var(--an-cream)]/60 text-[12.5px]">
               Wear what moves you! Curated pieces from Italy, Japan and our own collection,
               delivered across Lebanon.

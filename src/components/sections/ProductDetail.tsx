@@ -19,8 +19,9 @@ export function ProductDetail({ product }: { product: Product }) {
       <div className="container-gp grid md:grid-cols-2 gap-10 md:gap-16">
         <div className="relative aspect-[3/4] rounded-[12px] overflow-hidden bg-[#f6f4f0]">
           <Image
-            src={product.image}
-            alt={product.name}
+            key={color.image ?? product.image}
+            src={color.image ?? product.image}
+            alt={`${product.name} in ${color.name}`}
             fill
             priority
             sizes="(max-width: 768px) 100vw, 50vw"

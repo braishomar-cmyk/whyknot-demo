@@ -1,3 +1,4 @@
+﻿import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS, PLAN_LINK, INSTAGRAM_URL } from "@/lib/content";
 import { WhatsAppIcon, InstagramIcon } from "@/components/icons";
@@ -29,13 +30,15 @@ export function HeaderSection() {
             </nav>
           </div>
 
-          <Link
-            href="/"
-            className="justify-self-center font-display font-black text-[26px] md:text-[30px] leading-none lowercase text-center"
-          >
-            why
-            <br />
-            knot<span className="text-[var(--an-gold)]">.</span>
+          <Link href="/" className="justify-self-center" aria-label="Whyknot Clothing home">
+            <Image
+              src="/images/logo-trimmed.png"
+              alt="Whyknot Clothing"
+              width={828}
+              height={401}
+              priority
+              className="h-[52px] md:h-[62px] w-auto object-contain"
+            />
           </Link>
 
           <div className="justify-self-end flex items-center gap-5">
