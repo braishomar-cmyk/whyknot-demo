@@ -1,6 +1,7 @@
 import { HeaderSection } from "@/components/sections/HeaderSection";
-import { HeroCarousel } from "@/components/sections/HeroCarousel";
+import { HeroShowcase } from "@/components/sections/HeroShowcase";
 import { EditorialIntro } from "@/components/sections/EditorialIntro";
+import { FeaturedCategories } from "@/components/sections/FeaturedCategories";
 import { ReelsSection } from "@/components/sections/ReelsSection";
 import { SplitPromo } from "@/components/sections/SplitPromo";
 import { ProductGrid } from "@/components/sections/ProductGrid";
@@ -12,13 +13,15 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { BenefitsBar } from "@/components/sections/BenefitsBar";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { WhatsAppFloat } from "@/components/sections/WhatsAppFloat";
+import { PurchaseToast } from "@/components/sections/PurchaseToast";
 
 export default function Home() {
   return (
     <>
       <HeaderSection />
-      <HeroCarousel />
+      <HeroShowcase />
       <EditorialIntro />
+      <FeaturedCategories />
       <ReelsSection />
       <SplitPromo />
       <ProductGrid />
@@ -30,6 +33,7 @@ export default function Home() {
       <BenefitsBar />
       <FooterSection />
       <WhatsAppFloat />
+      <PurchaseToast />
     </>
   );
 }

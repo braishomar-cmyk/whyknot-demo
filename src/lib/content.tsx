@@ -28,17 +28,54 @@ export type Product = {
   toneTo: string;
   orderMessage: string;
   tag?: string;
+  image: string;
 };
+
+export type FeaturedCategory = {
+  name: string;
+  piece: string;
+  startFrom: string;
+  image: string;
+};
+
+export const FEATURED_CATEGORIES: FeaturedCategory[] = [
+  {
+    name: "Outerwear",
+    piece: "The Quilted Coat",
+    startFrom: "$120",
+    image: "/images/fashion/cat-outerwear.jpg",
+  },
+  {
+    name: "Knitwear",
+    piece: "Soft Chunky Knits",
+    startFrom: "$45",
+    image: "/images/fashion/cat-knitwear.jpg",
+  },
+  {
+    name: "Trousers",
+    piece: "Wide-Leg Trousers",
+    startFrom: "$60",
+    image: "/images/fashion/cat-trousers.jpg",
+  },
+  {
+    name: "Dresses",
+    piece: "Silk & Linen Dresses",
+    startFrom: "$72",
+    image: "/images/fashion/cat-dresses.jpg",
+  },
+];
 
 export const PRODUCTS: Product[] = [
   {
-    name: "The Column Dress",
+    name: "Sage Slip Dress",
     category: "Dresses",
-    price: "$85",
-    tone: "#2b2b2b",
-    toneTo: "#4d4a44",
-    orderMessage: "Hello! I'd like to order The Column Dress. Which sizes are available?",
-    tag: "New",
+    price: "$95",
+    compareAtPrice: "$120",
+    tone: "#8c9a8f",
+    toneTo: "#6d7a6f",
+    orderMessage: "Hello! I'd like to order the Sage Slip Dress. Which sizes are available?",
+    tag: "Sale",
+    image: "/images/fashion/product-sage-dress.jpg",
   },
   {
     name: "Linen Wrap Dress",
@@ -47,16 +84,7 @@ export const PRODUCTS: Product[] = [
     tone: "#c8b9a4",
     toneTo: "#a8977e",
     orderMessage: "Hello! I'd like to order the Linen Wrap Dress. Which sizes are available?",
-  },
-  {
-    name: "Silk Slip Dress",
-    category: "Dresses",
-    price: "$95",
-    compareAtPrice: "$120",
-    tone: "#8c9a8f",
-    toneTo: "#6d7a6f",
-    orderMessage: "Hello! I'd like to order the Silk Slip Dress. Which sizes are available?",
-    tag: "Sale",
+    image: "/images/fashion/product-wrap-dress.jpg",
   },
   {
     name: "Structured Blazer",
@@ -66,39 +94,53 @@ export const PRODUCTS: Product[] = [
     toneTo: "#5a606b",
     orderMessage: "Hello! I'd like to order the Structured Blazer. Which sizes are available?",
     tag: "New",
+    image: "/images/fashion/product-blazer.jpg",
   },
   {
-    name: "Everyday Knit Top",
+    name: "Ribbed Longsleeve",
+    category: "Tops",
+    price: "$49",
+    tone: "#5a708a",
+    toneTo: "#7d92aa",
+    orderMessage: "Hello! I'd like to order the Ribbed Longsleeve. Which sizes are available?",
+    image: "/images/fashion/product-slate-top.jpg",
+  },
+  {
+    name: "Everyday Knit",
     category: "Tops",
     price: "$45",
     tone: "#d8cfc2",
     toneTo: "#b8ab99",
-    orderMessage: "Hello! I'd like to order the Everyday Knit Top. Which sizes are available?",
+    orderMessage: "Hello! I'd like to order the Everyday Knit. Which sizes are available?",
+    image: "/images/fashion/product-oatmeal-knit.jpg",
   },
   {
-    name: "Oversized Shirt",
+    name: "Square-Neck Tank",
     category: "Tops",
-    price: "$55",
+    price: "$32",
     tone: "#eae6df",
     toneTo: "#c9c2b6",
-    orderMessage: "Hello! I'd like to order the Oversized Shirt. Which sizes are available?",
+    orderMessage: "Hello! I'd like to order the Square-Neck Tank. Which sizes are available?",
+    image: "/images/fashion/product-tank.jpg",
   },
   {
-    name: "Wool Coat",
+    name: "The Quilted Coat",
     category: "New In",
     price: "$160",
-    tone: "#6b5748",
-    toneTo: "#8a7361",
-    orderMessage: "Hello! I'd like to order the Wool Coat. Which sizes are available?",
+    tone: "#8f9e83",
+    toneTo: "#a9b59e",
+    orderMessage: "Hello! I'd like to order The Quilted Coat. Which sizes are available?",
     tag: "New",
+    image: "/images/fashion/cat-outerwear.jpg",
   },
   {
-    name: "Leather Belt Bag",
-    category: "Accessories",
-    price: "$38",
-    tone: "#26211d",
-    toneTo: "#453b33",
-    orderMessage: "Hello! I'd like to order the Leather Belt Bag.",
+    name: "Wide-Leg Trousers",
+    category: "New In",
+    price: "$68",
+    tone: "#a99cc0",
+    toneTo: "#c3b8d6",
+    orderMessage: "Hello! I'd like to order the Wide-Leg Trousers. Which sizes are available?",
+    image: "/images/fashion/cat-trousers.jpg",
   },
 ];
 
@@ -106,58 +148,52 @@ export type Reel = {
   title: string;
   product: string;
   price: string;
-  tone: string;
-  toneTo: string;
   orderMessage: string;
+  image: string;
 };
 
 export const REELS: Reel[] = [
   {
     title: "Styled 3 ways",
-    product: "The Column Dress",
-    price: "$85",
-    tone: "#2b2b2b",
-    toneTo: "#57534c",
-    orderMessage: "Hello! I saw The Column Dress in your video. Which sizes are available?",
+    product: "Sage Knit Set",
+    price: "$89",
+    orderMessage: "Hello! I saw the Sage Knit Set in your video. Which sizes are available?",
+    image: "/images/fashion/reel-walk.jpg",
+  },
+  {
+    title: "Cozy season",
+    product: "Everyday Knit",
+    price: "$45",
+    orderMessage: "Hello! I saw the Everyday Knit in your video. Which sizes are available?",
+    image: "/images/fashion/reel-seated.jpg",
+  },
+  {
+    title: "The perfect drape",
+    product: "Sage Slip Dress",
+    price: "$95",
+    orderMessage: "Hello! I saw the Sage Slip Dress in your video. Which sizes are available?",
+    image: "/images/fashion/product-sage-dress.jpg",
   },
   {
     title: "From day to night",
     product: "Structured Blazer",
     price: "$110",
-    tone: "#3b3f46",
-    toneTo: "#6b727e",
     orderMessage: "Hello! I saw the Structured Blazer in your video. Which sizes are available?",
-  },
-  {
-    title: "The perfect drape",
-    product: "Silk Slip Dress",
-    price: "$95",
-    tone: "#8c9a8f",
-    toneTo: "#aab5ac",
-    orderMessage: "Hello! I saw the Silk Slip Dress in your video. Which sizes are available?",
-  },
-  {
-    title: "Winter layering",
-    product: "Wool Coat",
-    price: "$160",
-    tone: "#6b5748",
-    toneTo: "#97826f",
-    orderMessage: "Hello! I saw the Wool Coat in your video. Which sizes are available?",
+    image: "/images/fashion/product-blazer.jpg",
   },
 ];
 
 export type StyleCategory = {
   name: string;
   blurb: string;
-  tone: string;
-  toneTo: string;
+  image: string;
 };
 
 export const STYLES: StyleCategory[] = [
-  { name: "Workwear", blurb: "Sharp, easy, all day", tone: "#3b3f46", toneTo: "#5a606b" },
-  { name: "Weekend", blurb: "Soft layers, no effort", tone: "#c8b9a4", toneTo: "#a8977e" },
-  { name: "Evening", blurb: "Quiet drama", tone: "#26211d", toneTo: "#4a3f36" },
-  { name: "Essentials", blurb: "The everyday base", tone: "#eae6df", toneTo: "#c9c2b6" },
+  { name: "Workwear", blurb: "Sharp, easy, all day", image: "/images/fashion/product-blazer.jpg" },
+  { name: "Weekend", blurb: "Soft layers, no effort", image: "/images/fashion/cat-knitwear.jpg" },
+  { name: "Evening", blurb: "Quiet drama", image: "/images/fashion/cat-dresses.jpg" },
+  { name: "Essentials", blurb: "The everyday base", image: "/images/fashion/journal-flatlay.jpg" },
 ];
 
 export type Testimonial = {

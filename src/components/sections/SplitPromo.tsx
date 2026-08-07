@@ -1,12 +1,18 @@
+import Image from "next/image";
+
 export function SplitPromo() {
   return (
     <section className="py-16 md:py-20 bg-[var(--an-sand)]">
       <div className="container-gp grid md:grid-cols-2 gap-10 items-center">
-        <div
-          className="rounded-[4px] aspect-[4/5] max-h-[560px] w-full overflow-hidden"
-          style={{ background: "linear-gradient(160deg,#6b5748,#b8a48c)" }}
-        >
-          <div className="flex h-full items-end p-8">
+        <div className="relative rounded-[10px] aspect-[4/5] max-h-[600px] w-full overflow-hidden">
+          <Image
+            src="/images/fashion/hero-main.jpg"
+            alt="Sage quilted jacket from the winter edit"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 flex items-end p-8 bg-gradient-to-t from-black/25 via-transparent to-transparent">
             <span className="uppercase text-[10px] tracking-[0.24em] font-semibold bg-white/90 text-[var(--an-ink)] px-4 py-1.5 rounded-full">
               The Winter Edit
             </span>

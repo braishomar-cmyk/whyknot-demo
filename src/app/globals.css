@@ -93,14 +93,14 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* Atelier clothing demo palette: editorial fashion, paper white / near-black / camel */
-  --an-cream: #faf9f7;
-  --an-sand: #f2f0ec;
-  --an-ink: #1a1a1a;
-  --an-olive: #333333;
-  --an-olive-deep: #1a1a1a;
-  --an-gold: #b08d57;
-  --an-gold-light: #d9c3a3;
+  /* Atelier clothing demo palette: warm cream canvas, sage accent, soft charcoal */
+  --an-cream: #f5efe4;
+  --an-sand: #efe7d8;
+  --an-ink: #232323;
+  --an-olive: #3a3a3a;
+  --an-olive-deep: #232323;
+  --an-gold: #8f9e83;
+  --an-gold-light: #cdd6c4;
   --an-terra: #6b5748;
   --an-wa: #1fb355;
 }
@@ -230,5 +230,18 @@
     .container-gp {
       padding-inline: 5rem;
     }
+  }
+
+  /* Pill-outline eyebrow badge (reference pattern: "Just Landed", "Browse by Style") */
+  .pill-badge {
+    display: inline-block;
+    border: 1px solid rgba(35, 35, 35, 0.12);
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--an-gold);
+    border-radius: 999px;
+    padding: 8px 22px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    font-weight: 500;
   }
 }
