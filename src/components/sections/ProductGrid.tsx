@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { PRODUCTS, waLink } from "@/lib/content";
 import { WhatsAppIcon } from "@/components/icons";
 
@@ -45,7 +46,10 @@ export function ProductGrid() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8 mt-10">
           {filtered.map((p) => (
             <div key={p.name} className="group flex flex-col">
-              <div className="relative aspect-[3/4] overflow-hidden bg-[#f6f4f0]">
+              <Link
+                href={`/product/${p.slug}`}
+                className="relative block aspect-[3/4] overflow-hidden bg-[#f6f4f0]"
+              >
                 <Image
                   src={p.image}
                   alt={p.name}
@@ -62,9 +66,11 @@ export function ProductGrid() {
                     {p.tag === "Sale" ? p.price : p.tag}
                   </span>
                 ) : null}
-              </div>
+              </Link>
               <h3 className="font-display text-[17px] md:text-[19px] font-semibold text-center mt-4">
-                {p.name}
+                <Link href={`/product/${p.slug}`} className="hover:text-[var(--an-gold)] transition-colors">
+                  {p.name}
+                </Link>
               </h3>
               <div className="flex items-center justify-center gap-2 mt-1">
                 {p.compareAtPrice ? (
