@@ -44,6 +44,18 @@ export type Product = {
   sizes: string[];
 };
 
+/** Lebanese governorates we deliver to, listed on the delivery page */
+export const GOVERNORATES = [
+  "Beirut",
+  "Mount Lebanon",
+  "North Lebanon",
+  "Akkar",
+  "South Lebanon",
+  "Nabatieh",
+  "Bekaa",
+  "Baalbek-Hermel",
+];
+
 export const SIZE_GUIDE = [
   { size: "One Size", bust: "84-102", waist: "64-84", hips: "90-108" },
   { size: "S", bust: "86", waist: "66", hips: "92" },

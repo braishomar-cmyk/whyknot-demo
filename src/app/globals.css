@@ -167,6 +167,13 @@
       "opsz" 144;
     letter-spacing: -0.005em;
   }
+  /* Fraunces' true italic is far lighter than its roman, which reads as a font
+     mismatch next to the chunky wordmark. Emphasise with weight + colour instead. */
+  .font-display em,
+  .font-display i {
+    font-style: normal;
+    font-weight: 700;
+  }
 
   /* GP-style section heading: uppercase, centered, medium weight */
   .section-heading {

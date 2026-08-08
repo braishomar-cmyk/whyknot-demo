@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link";
 import {
   BUSINESS_NAME,
   INSTAGRAM_HANDLE,
@@ -6,8 +7,13 @@ import {
   LOCATION,
   NAV_LINKS,
   WHATSAPP_NUMBER,
-  waLink,
 } from "@/lib/content";
+
+const HELP_LINKS = [
+  { label: "How to order", href: "/how-to-order" },
+  { label: "Delivery", href: "/delivery" },
+  { label: "Exchanges", href: "/exchanges" },
+];
 
 export function FooterSection() {
   return (
@@ -45,30 +51,15 @@ export function FooterSection() {
             <div className="uppercase text-[11px] tracking-[0.18em] font-semibold text-[var(--an-gold-light)] mb-3">
               Help
             </div>
-            <a
-              href={waLink("Hello! How do I order?")}
-              target="_blank"
-              rel="noreferrer"
-              className="block py-1 text-[var(--an-cream)]/70 hover:text-white transition"
-            >
-              How to order
-            </a>
-            <a
-              href={waLink("Hello! What are your delivery areas and fees?")}
-              target="_blank"
-              rel="noreferrer"
-              className="block py-1 text-[var(--an-cream)]/70 hover:text-white transition"
-            >
-              Delivery
-            </a>
-            <a
-              href={waLink("Hello! I have a question about exchanges")}
-              target="_blank"
-              rel="noreferrer"
-              className="block py-1 text-[var(--an-cream)]/70 hover:text-white transition"
-            >
-              Exchanges
-            </a>
+            {HELP_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block py-1 text-[var(--an-cream)]/70 hover:text-white transition"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
           <div>
             <div className="uppercase text-[11px] tracking-[0.18em] font-semibold text-[var(--an-gold-light)] mb-3">
@@ -95,8 +86,8 @@ export function FooterSection() {
         </div>
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row gap-2 items-center justify-between text-[11.5px] text-[var(--an-cream)]/50">
           <span>© 2026 {BUSINESS_NAME}</span>
-          <span>Demo template, rebranded per client</span>
-          <span>Made for WhatsApp-first selling</span>
+          <span>Order on WhatsApp, cash on delivery</span>
+          <span>Delivering across Lebanon</span>
         </div>
       </div>
     </footer>
