@@ -21,17 +21,17 @@ export function HeaderSection() {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="bg-[var(--an-ink)] text-[var(--an-gold-light)] py-3 overflow-hidden">
+      <div className="bg-[var(--an-ink)] text-[var(--an-gold-light)] py-2 overflow-hidden">
         <div className="marquee-banner">
           {[0, 1].map((track) => (
             <div key={track} aria-hidden={track === 1} className="flex shrink-0">
               {BANNER_MESSAGES.map((message) => (
                 <span
                   key={message}
-                  className="flex items-center whitespace-nowrap text-[12px] md:text-[14px] uppercase tracking-[0.2em] font-medium"
+                  className="flex items-center whitespace-nowrap text-[10.5px] md:text-[11.5px] uppercase tracking-[0.16em] font-medium"
                 >
                   {message}
-                  <span className="mx-6 text-[var(--an-gold)]">&#10022;</span>
+                  <span className="mx-4 text-[var(--an-gold)]">&#10022;</span>
                 </span>
               ))}
             </div>

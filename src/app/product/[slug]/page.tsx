@@ -82,6 +82,13 @@ export default async function ProductPage({ params }: Props) {
         rating={product.rating}
         reviewCount={product.reviewCount}
         reviews={product.reviews}
+        sizeLabel={
+          product.category === "Accessories"
+            ? "none"
+            : product.sizes.length === 1
+              ? "usually wears"
+              : "picked"
+        }
       />
 
       <section className="py-12 md:py-16 bg-[var(--an-cream)]">

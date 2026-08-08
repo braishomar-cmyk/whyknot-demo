@@ -65,10 +65,14 @@ export function ProductReviews({
   rating,
   reviewCount,
   reviews,
+  sizeLabel = "picked",
 }: {
   rating: number;
   reviewCount: number;
   reviews: Review[];
+  /** "usually wears" for one-size pieces, "picked" when there are real size options,
+      "none" for accessories where a garment size means nothing */
+  sizeLabel?: "usually wears" | "picked" | "none";
 }) {
   const breakdown = ratingBreakdown(reviews);
   const shown = reviews.length;
@@ -120,7 +124,9 @@ export function ProductReviews({
                 <p className="mt-2 text-[13.5px] leading-relaxed opacity-80">{review.text}</p>
                 <p className="mt-3 text-[11.5px] uppercase tracking-[0.1em] opacity-55">
                   {review.author}
-                  {review.size ? ` · bought ${review.size}` : ""}
+                  {review.size && sizeLabel !== "none"
+                    ? ` · ${sizeLabel === "picked" ? "picked size" : "usually wears"} ${review.size}`
+                    : ""}
                   <span className="ml-2 rounded-full bg-[var(--an-gold)]/12 px-2 py-0.5 tracking-normal text-[10.5px] normal-case text-[var(--an-gold)]">
                     Verified buyer
                   </span>

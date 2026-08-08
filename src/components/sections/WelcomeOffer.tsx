@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { waLink } from "@/lib/content";
-import { CloseIcon, WhatsAppIcon } from "@/components/icons";
+import { CloseIcon } from "@/components/icons";
 
 const STORAGE_KEY = "whyknot-welcome-offer";
 const DISCOUNT_CODE = "WELCOME10";
@@ -138,15 +137,6 @@ export function WelcomeOffer() {
                   Get My 10% Off
                 </button>
               </form>
-
-              <a
-                href={waLink("Hello Whyknot! I'd like to claim the 10% first-order discount")}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-3 inline-flex items-center justify-center gap-2 text-[12px] opacity-70 transition-colors hover:text-[var(--an-gold)] hover:opacity-100"
-              >
-                <WhatsAppIcon className="w-3.5" /> Or claim it on WhatsApp
-              </a>
 
               <button
                 type="button"
