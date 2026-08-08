@@ -27,7 +27,7 @@ export function FeaturedCategories() {
                 <h3 className="font-display text-[19px] md:text-[22px] font-semibold mt-2 leading-snug">
                   {cat.piece}
                 </h3>
-                <p className="text-[12px] opacity-85 mt-0.5">Start From {cat.startFrom}</p>
+                <p className="text-[12px] opacity-85 mt-0.5">From {cat.startFrom}</p>
               </div>
             </a>
           ))}

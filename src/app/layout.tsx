@@ -7,7 +7,9 @@ const fraunces = Fraunces({
   variable: "--font-cormorant",
   subsets: ["latin"],
   weight: "variable",
-  style: ["normal", "italic"],
+  // No italic face: emphasis is weight + colour (see globals.css), so the
+  // 146KB italic file was downloading on every page and never rendering.
+  style: ["normal"],
   axes: ["SOFT", "WONK", "opsz"],
 });
 
@@ -17,7 +19,10 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500", "700"],
 });
 
+export const SITE_URL = "https://whyknot-demo.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Whyknot Clothing | Wear What Moves You",
   description:
     "Curated one-size pieces from Italy and Japan, boho dresses and statement tees, chosen with love in Lebanon. Order in two taps on WhatsApp, cash on delivery.",
@@ -27,10 +32,14 @@ export const metadata: Metadata = {
       "Curated one-size pieces from Italy and Japan, chosen with love in Lebanon. Order in two taps on WhatsApp, cash on delivery.",
     type: "website",
     locale: "en_US",
+    images: [
+      { url: "/seo/og-default.jpg", width: 1200, height: 630, alt: "Whyknot Clothing" },
+    ],
     siteName: BUSINESS_NAME,
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/seo/og-default.jpg"],
     title: "Whyknot Clothing | Wear What Moves You",
     description:
       "Curated one-size pieces from Italy and Japan, chosen with love in Lebanon. Order in two taps on WhatsApp, cash on delivery.",
@@ -43,6 +52,8 @@ const storeSchema = {
   "@context": "https://schema.org",
   "@type": "ClothingStore",
   name: BUSINESS_NAME,
+  url: SITE_URL,
+  image: `${SITE_URL}/seo/og-default.jpg`,
   slogan: "Wear what moves you!",
   description:
     "Curated womenswear boutique in Lebanon: one-size pieces from Italy and Japan, boho dresses and statement tees, delivered across Lebanon with cash on delivery.",

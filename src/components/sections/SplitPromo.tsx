@@ -26,7 +26,7 @@ export function SplitPromo() {
             Prints that do the talking
           </h2>
           <p className="mt-5 text-[14.5px] leading-relaxed opacity-75 max-w-[440px]">
-            Leopard, kelly green, joyful prints from small makers in Italy and Japan. Pieces
+            Paisley, ikat, kelly green, joyful prints from small makers in Italy and Japan. Pieces
             picked in small batches, so what you wear stays yours.
           </p>
           <div className="mt-7 flex gap-4 flex-wrap">

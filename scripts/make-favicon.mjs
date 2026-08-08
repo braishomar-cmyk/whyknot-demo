@@ -2,20 +2,23 @@ import sharp from "sharp";
 
 const src = "public/images/logo.png";
 
-// Browser tab icon: trimmed logo on transparent, padded square
-const trimmed = await sharp(src).trim({ threshold: 10 }).resize(440, 440, {
-  fit: "contain",
-  background: { r: 0, g: 0, b: 0, alpha: 0 },
-}).toBuffer();
+// Logo trimmed to its bounds, centred on a white rounded square so it pops
+// against dark browser tabs and light ones alike.
+const mark = await sharp(src)
+  .trim({ threshold: 10 })
+  .resize(400, 400, { fit: "contain", background: { r: 255, g: 255, b: 255, alpha: 0 } })
+  .toBuffer();
 
-await sharp({
-  create: { width: 512, height: 512, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
-})
-  .composite([{ input: trimmed, gravity: "center" }])
+const rounded = Buffer.from(
+  '<svg width="512" height="512"><rect width="512" height="512" rx="96" ry="96" fill="#ffffff"/></svg>',
+);
+
+await sharp(rounded)
+  .composite([{ input: mark, gravity: "center" }])
   .png()
   .toFile("src/app/icon.png");
 
-// iOS home-screen icon: white background
+// iOS home screen: square white, no rounding (iOS masks it itself)
 await sharp({
   create: { width: 180, height: 180, channels: 4, background: { r: 255, g: 255, b: 255, alpha: 1 } },
 })
@@ -23,7 +26,7 @@ await sharp({
     {
       input: await sharp(src)
         .trim({ threshold: 10 })
-        .resize(148, 148, { fit: "contain", background: { r: 255, g: 255, b: 255, alpha: 1 } })
+        .resize(140, 140, { fit: "contain", background: { r: 255, g: 255, b: 255, alpha: 0 } })
         .toBuffer(),
       gravity: "center",
     },
@@ -31,4 +34,4 @@ await sharp({
   .png()
   .toFile("src/app/apple-icon.png");
 
-console.log("icons written");
+console.log("icons written with white background");

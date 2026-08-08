@@ -101,6 +101,9 @@
   --an-olive: #333333;
   --an-olive-deep: #1c1c1c;
   --an-gold: #b0603c;
+  /* Darker terracotta for small text: #b0603c is only 4.33:1 on cream,
+     which fails WCAG AA for body sizes. Accents/borders keep --an-gold. */
+  --an-gold-text: #94502e;
   --an-gold-light: #e6c3a8;
   --an-terra: #c97a4e;
   --an-wa: #1fb355;
@@ -160,12 +163,26 @@
 @layer utilities {
   .font-display {
     font-family: var(--font-cormorant), serif;
-    /* SOFT + WONK round the terminals so headings echo the chunky wordmark */
+    /* SOFT rounds the terminals so headings echo the chunky wordmark.
+       opsz is deliberately NOT pinned here: Fraunces' optical-size axis runs 9-144,
+       and forcing 144 made small headings (18px review titles) render with
+       display-weight hairlines, cramped and spindly. Leaving it to
+       font-optical-sizing lets each size get the drawing it was designed for.
+       WONK (the quirky alternates) is off by default and switched on only for
+       the very large display moments, where there is room to read it. */
     font-variation-settings:
       "SOFT" 100,
-      "WONK" 1,
-      "opsz" 144;
+      "WONK" 0;
+    font-optical-sizing: auto;
     letter-spacing: -0.005em;
+  }
+
+  /* Big display type: wonky alternates on, echoing the logo's character */
+  .font-display-xl {
+    font-variation-settings:
+      "SOFT" 100,
+      "WONK" 1;
+    font-optical-sizing: auto;
   }
   /* Fraunces' true italic is far lighter than its roman, which reads as a font
      mismatch next to the chunky wordmark. Emphasise with weight + colour instead. */
@@ -251,7 +268,7 @@
     display: inline-block;
     border: 1px solid rgba(35, 35, 35, 0.12);
     background: rgba(255, 255, 255, 0.65);
-    color: var(--an-gold);
+    color: var(--an-gold-text);
     border-radius: 999px;
     padding: 8px 22px;
     font-size: 13px;

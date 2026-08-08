@@ -11,7 +11,7 @@ export function ProductDetail({ product }: { product: Product }) {
   const [size, setSize] = useState<string | null>(null);
   const [guideOpen, setGuideOpen] = useState(false);
 
-  const orderMessage = `Hello! I'd like to order the ${product.name} in ${color.name}${
+  const orderMessage = `Hello Whyknot! I'd like to order the ${product.name} in ${color.name}${
     size ? `, size ${size}` : ""
   }. Is it available?`;
 
@@ -179,7 +179,7 @@ export function ProductDetail({ product }: { product: Product }) {
               </summary>
               <p className="mt-3 text-[13px] leading-relaxed opacity-75">
                 Delivery across Lebanon in 2 to 4 working days, cash on delivery. Free over $75.
-                Easy exchanges within 7 days, arranged on WhatsApp.
+                Easy exchanges within 3 days, arranged on WhatsApp.
               </p>
             </details>
           </div>

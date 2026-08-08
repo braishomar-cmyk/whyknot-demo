@@ -1,5 +1,6 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
+import { InstagramIcon, WhatsAppIcon } from "@/components/icons";
 import {
   BUSINESS_NAME,
   INSTAGRAM_HANDLE,
@@ -65,23 +66,29 @@ export function FooterSection() {
             <div className="uppercase text-[11px] tracking-[0.18em] font-semibold text-[var(--an-gold-light)] mb-3">
               Contact
             </div>
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noreferrer"
-              className="block py-1 text-[var(--an-cream)]/70 hover:text-white transition"
-            >
-              WhatsApp us
-            </a>
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="block py-1 text-[var(--an-cream)]/70 hover:text-white transition"
-            >
-              {INSTAGRAM_HANDLE}
-            </a>
-            <div className="py-1 text-[var(--an-cream)]/70">{LOCATION}</div>
+            <div className="flex items-center gap-3 py-1">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Message us on WhatsApp"
+                title="WhatsApp"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-[var(--an-cream)]/80 transition-colors hover:border-[var(--an-wa)] hover:bg-[var(--an-wa)] hover:text-white"
+              >
+                <WhatsAppIcon className="w-[18px]" />
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Follow us on Instagram, ${INSTAGRAM_HANDLE}`}
+                title={INSTAGRAM_HANDLE}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-[var(--an-cream)]/80 transition-colors hover:border-[var(--an-gold)] hover:bg-[var(--an-gold)] hover:text-white"
+              >
+                <InstagramIcon className="w-[18px]" />
+              </a>
+            </div>
+            <div className="pt-2 text-[var(--an-cream)]/70">{LOCATION}</div>
           </div>
         </div>
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row gap-2 items-center justify-between text-[11.5px] text-[var(--an-cream)]/50">

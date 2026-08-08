@@ -12,11 +12,11 @@ export function waLink(message: string) {
 export const PLAN_LINK = waLink("Hello Whyknot! I'd like to order from your collection ✨");
 
 export const NAV_LINKS = [
-  { label: "New In", href: "#shop" },
-  { label: "Dresses", href: "#shop" },
-  { label: "Tees", href: "#shop" },
-  { label: "One Size", href: "#shop" },
-  { label: "Our Story", href: "#story" },
+  { label: "New In", href: "/#shop" },
+  { label: "Dresses", href: "/#shop" },
+  { label: "Tees", href: "/#shop" },
+  { label: "One Size", href: "/#shop" },
+  { label: "Our Story", href: "/#story" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -69,7 +69,7 @@ export const GOVERNORATES = [
 ];
 
 export const SIZE_GUIDE = [
-  { size: "S", bust: "84-102", waist: "64-84", hips: "90-108" },
+  { size: "One Size", bust: "84-102", waist: "64-84", hips: "90-108" },
   { size: "S", bust: "86", waist: "66", hips: "92" },
   { size: "M", bust: "90", waist: "70", hips: "96" },
   { size: "L", bust: "96", waist: "76", hips: "102" },
@@ -89,25 +89,25 @@ export const FEATURED_CATEGORIES: FeaturedCategory[] = [
   {
     name: "Dresses",
     piece: "Boho Maxi Dresses",
-    startFrom: "$65",
+    startFrom: "$72",
     image: "/images/whyknot/santorini-maxi-coral.jpg",
   },
   {
     name: "Tees",
     piece: "Statement Tees",
-    startFrom: "$32",
+    startFrom: "$42",
     image: "/images/whyknot/evil-eye-tee-white.jpg",
   },
   {
     name: "Shirts",
     piece: "Mimoto Made in Japan",
-    startFrom: "$78",
+    startFrom: "$58",
     image: "/images/whyknot/mimoto-crowd-shirt-sky.jpg",
   },
   {
     name: "Summer",
     piece: "Hats & Loungewear",
-    startFrom: "$28",
+    startFrom: "$38",
     image: "/images/whyknot/sun-hat-blue.jpg",
   },
 ];
@@ -149,7 +149,7 @@ export const PRODUCTS: Product[] = [
         rating: 5,
         date: "February 2026",
         title: "The blue is even prettier in person",
-        text: "Ordered the Aegean Blue after seeing it on their page. Arrived in two days, packed really nicely. Straps are adjustable which helped a lot.",
+        text: "Ordered the Aegean Blue after seeing it on Instagram. Arrived in two days, packed really nicely. Straps are adjustable which helped a lot.",
         size: "L",
       },
       {

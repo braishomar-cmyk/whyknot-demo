@@ -23,7 +23,7 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="font-display text-[38px] md:text-[56px] font-medium mt-4 leading-[1.1]">
-            We reply <span className="italic text-[var(--an-gold-light)]">fast.</span>
+            We reply <em className=" text-[var(--an-gold-light)]">fast.</em>
           </h1>
           <p className="mt-6 text-[13px] uppercase tracking-[0.16em] text-[var(--an-cream)]/80">
             {LOCATION} · Delivery Across Lebanon

@@ -40,7 +40,7 @@ export function MobileMenu() {
               rel="noreferrer"
               onClick={() => setOpen(false)}
             >
-              <WhatsAppIcon className="w-4" /> Start Planning
+              <WhatsAppIcon className="w-4" /> Order on WhatsApp
             </a>
           </div>
         </nav>

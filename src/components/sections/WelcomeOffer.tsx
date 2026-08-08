@@ -103,8 +103,8 @@ export function WelcomeOffer() {
                 </span>
               </div>
               <p className="mt-4 text-[13px] leading-relaxed opacity-70">
-                Use it at checkout on your first order. We&apos;ve also sent it to your inbox so
-                you don&apos;t lose it.
+                Send it with your first order on WhatsApp and we&apos;ll take 10% off. We&apos;ve
+                also sent it to your inbox so you don&apos;t lose it.
               </p>
               <button type="button" onClick={dismiss} className="btn-solid mt-6 w-full">
                 Start Shopping

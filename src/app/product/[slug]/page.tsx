@@ -9,6 +9,7 @@ import { BenefitsBar } from "@/components/sections/BenefitsBar";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { WhatsAppFloat } from "@/components/sections/WhatsAppFloat";
 import { PRODUCTS } from "@/lib/content";
+import { SITE_URL } from "@/app/layout";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,9 +21,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = PRODUCTS.find((p) => p.slug === slug);
   if (!product) return { title: "Whyknot Clothing" };
+  const shortDesc =
+    product.description.length > 90
+      ? `${product.description.slice(0, 90).trimEnd()}...`
+      : product.description;
+
   return {
     title: `${product.name} | Whyknot Clothing`,
     description: `${product.description} Order on WhatsApp, delivered across Lebanon with cash on delivery.`,
+    openGraph: {
+      title: `${product.name} | Whyknot Clothing`,
+      description: shortDesc,
+      images: [{ url: product.image, width: 1200, height: 630, alt: product.name }],
+    },
   };
 }
 
@@ -40,13 +51,14 @@ export default async function ProductPage({ params }: Props) {
     "@type": "Product",
     name: product.name,
     description: product.description,
-    image: product.image,
+    image: `${SITE_URL}${product.image}`,
     brand: { "@type": "Brand", name: "Whyknot Clothing" },
     offers: {
       "@type": "Offer",
       price: product.price.replace("$", ""),
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/product/${product.slug}`,
     },
     aggregateRating: {
       "@type": "AggregateRating",

@@ -4,7 +4,7 @@ import { WhatsAppIcon } from "@/components/icons";
 export function WhatsAppFloat() {
   return (
     <a
-      aria-label="Start planning on WhatsApp"
+      aria-label="Order on WhatsApp"
       href={PLAN_LINK}
       target="_blank"
       rel="noreferrer"

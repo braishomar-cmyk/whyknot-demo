@@ -21,7 +21,7 @@ export function HeroShowcase() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-[8%] flex justify-center anim-watermark"
       >
-        <span className="font-display lowercase font-black text-[20vw] leading-none text-[#e8ddc7]/70 select-none">
+        <span className="font-display font-display-xl lowercase font-black text-[20vw] leading-none text-[#e8ddc7]/70 select-none">
           whyknot.
         </span>
       </div>
@@ -46,7 +46,8 @@ export function HeroShowcase() {
             alt="The Santorini Maxi from the Whyknot collection"
             fill
             priority
-            sizes="380px"
+            sizes="(max-width: 767px) 300px, 380px"
+            quality={65}
             className="object-cover rounded-t-[14px]"
           />
         </div>
@@ -66,7 +67,8 @@ export function HeroShowcase() {
                 src={p.image}
                 alt={p.name}
                 fill
-                sizes="210px"
+                sizes="(max-width: 767px) 150px, 210px"
+                quality={60}
                 className="object-cover"
               />
               <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent p-3 text-left opacity-0 transition-opacity group-hover:opacity-100">

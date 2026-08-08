@@ -17,7 +17,7 @@ const navLinkClass =
 
 export function HeaderSection() {
   const leftLinks = NAV_LINKS.slice(0, 3);
-  const rightLinks = NAV_LINKS.slice(4);
+  const rightLinks = NAV_LINKS.slice(3);
 
   return (
     <div className="sticky top-0 z-50">
@@ -56,8 +56,8 @@ export function HeaderSection() {
             <Image
               src="/images/logo-trimmed.png"
               alt="Whyknot Clothing"
-              width={828}
-              height={401}
+              width={256}
+              height={124}
               priority
               className="h-[52px] md:h-[62px] w-auto object-contain"
             />

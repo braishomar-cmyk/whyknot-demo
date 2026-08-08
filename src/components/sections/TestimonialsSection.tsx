@@ -6,7 +6,7 @@ export function TestimonialsSection() {
     <section className="py-16 md:py-20 bg-[var(--an-cream)]">
       <div className="container-gp">
         <div className="text-center">
-          <p className="pill-badge">Client Love</p>
+          <p className="pill-badge">Customer Love</p>
           <h2 className="font-display text-[32px] md:text-[48px] font-medium mt-4 leading-[1.08]">
             Worn on <em className="italic text-[var(--an-gold)]">repeat</em>
           </h2>
