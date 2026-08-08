@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { SIZE_GUIDE, waLink, type Product } from "@/lib/content";
+import { RatingSummary } from "@/components/sections/Reviews";
 import { WhatsAppIcon } from "@/components/icons";
 
 export function ProductDetail({ product }: { product: Product }) {
@@ -45,6 +46,13 @@ export function ProductDetail({ product }: { product: Product }) {
           <h1 className="font-display text-[32px] md:text-[42px] font-medium leading-[1.1] mt-2">
             {product.name}
           </h1>
+
+          <a
+            href="#reviews"
+            className="mt-2.5 inline-flex items-center gap-1.5 transition-opacity hover:opacity-70"
+          >
+            <RatingSummary rating={product.rating} reviewCount={product.reviewCount} size="md" />
+          </a>
           <div className="flex items-center gap-3 mt-3">
             <span className="text-[20px] font-medium">{product.price}</span>
             {product.compareAtPrice ? (

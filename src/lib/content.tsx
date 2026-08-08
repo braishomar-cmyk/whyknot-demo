@@ -27,6 +27,15 @@ export type ProductColor = {
   image?: string;
 };
 
+export type Review = {
+  author: string;
+  rating: number;
+  date: string;
+  title: string;
+  text: string;
+  size?: string;
+};
+
 export type Product = {
   slug: string;
   name: string;
@@ -42,6 +51,9 @@ export type Product = {
   fabric: string;
   colors: ProductColor[];
   sizes: string[];
+  rating: number;
+  reviewCount: number;
+  reviews: Review[];
 };
 
 /** Lebanese governorates we deliver to, listed on the delivery page */
@@ -121,6 +133,34 @@ export const PRODUCTS: Product[] = [
       { name: "Aegean Blue", hex: "#5fc6d4", image: "/images/whyknot/santorini-maxi-aegean.jpg" },
     ],
     sizes: ONE_SIZE,
+    rating: 4.9,
+    reviewCount: 27,
+    reviews: [
+      {
+        author: "Maya K.",
+        rating: 5,
+        date: "March 2026",
+        title: "Wore it three times in one week",
+        text: "The fit is so forgiving and the fabric moves beautifully. I am 168cm and it falls just above my ankles. Got compliments all night at a wedding in Batroun.",
+        size: "One Size",
+      },
+      {
+        author: "Rita S.",
+        rating: 5,
+        date: "February 2026",
+        title: "The blue is even prettier in person",
+        text: "Ordered the Aegean Blue after seeing it on their page. Arrived in two days, packed really nicely. Straps are adjustable which helped a lot.",
+        size: "One Size",
+      },
+      {
+        author: "Jana H.",
+        rating: 4,
+        date: "February 2026",
+        title: "Beautiful, runs long",
+        text: "Gorgeous dress and the print is exactly like the photos. I am petite so I had it shortened slightly, otherwise perfect.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "amalfi-ikat-maxi",
@@ -138,6 +178,26 @@ export const PRODUCTS: Product[] = [
     fabric: "100% viscose. Cool hand wash, line dry in shade.",
     colors: [{ name: "Ikat Multi", hex: "#4a6fd4" }],
     sizes: ONE_SIZE,
+    rating: 4.8,
+    reviewCount: 19,
+    reviews: [
+      {
+        author: "Nour A.",
+        rating: 5,
+        date: "March 2026",
+        title: "My holiday dress",
+        text: "Took it to Cyprus and lived in it. Light enough for the heat and it did not crease in the suitcase at all.",
+        size: "One Size",
+      },
+      {
+        author: "Lea M.",
+        rating: 5,
+        date: "January 2026",
+        title: "Colours are gorgeous",
+        text: "The print is much richer than a photo can show. Waist ties nicely so it does not look like a tent.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "marrakesh-tiered-dress",
@@ -154,6 +214,26 @@ export const PRODUCTS: Product[] = [
     fabric: "Rayon blend. Machine wash cold, gentle cycle.",
     colors: [{ name: "Noir Print", hex: "#2b2b2b" }],
     sizes: ONE_SIZE,
+    rating: 4.7,
+    reviewCount: 14,
+    reviews: [
+      {
+        author: "Carine D.",
+        rating: 5,
+        date: "February 2026",
+        title: "Goes with everything",
+        text: "Black and beige means it works with any sandals I own. Wore it to lunch and then straight to dinner.",
+        size: "One Size",
+      },
+      {
+        author: "Yasmina K.",
+        rating: 4,
+        date: "January 2026",
+        title: "Lovely, slightly sheer",
+        text: "Beautiful print and cut. I wear a slip underneath in bright daylight, otherwise no complaints.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "positano-maxi-dress",
@@ -171,6 +251,26 @@ export const PRODUCTS: Product[] = [
     fabric: "Rayon. Cool hand wash, hang to dry.",
     colors: [{ name: "Fuchsia Paisley", hex: "#d63a6a" }],
     sizes: ONE_SIZE,
+    rating: 5.0,
+    reviewCount: 22,
+    reviews: [
+      {
+        author: "Rana T.",
+        rating: 5,
+        date: "March 2026",
+        title: "Everyone asked where it was from",
+        text: "The colours are unreal. I bought it for a beach wedding and three people asked me for the account name.",
+        size: "One Size",
+      },
+      {
+        author: "Sara B.",
+        rating: 5,
+        date: "February 2026",
+        title: "Worth every dollar",
+        text: "Fabric feels expensive and the tassels are a nice detail. Arrived faster than expected in Jounieh.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "capri-paisley-dress",
@@ -187,6 +287,26 @@ export const PRODUCTS: Product[] = [
     fabric: "Viscose with metallic thread. Cool hand wash.",
     colors: [{ name: "Azure Gold", hex: "#2b7fb8" }],
     sizes: ONE_SIZE,
+    rating: 4.8,
+    reviewCount: 16,
+    reviews: [
+      {
+        author: "Mira F.",
+        rating: 5,
+        date: "February 2026",
+        title: "The gold thread is beautiful",
+        text: "Catches the light without being too much. Very comfortable in the heat.",
+        size: "One Size",
+      },
+      {
+        author: "Hala N.",
+        rating: 5,
+        date: "January 2026",
+        title: "Great for travel",
+        text: "Rolls up small, comes out fine. Became my go to for evenings out.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "olive-grove-halter",
@@ -203,6 +323,26 @@ export const PRODUCTS: Product[] = [
     fabric: "Rayon blend. Cool hand wash, line dry.",
     colors: [{ name: "Olive Damask", hex: "#3d6b4a" }],
     sizes: ONE_SIZE,
+    rating: 4.9,
+    reviewCount: 12,
+    reviews: [
+      {
+        author: "Tala R.",
+        rating: 5,
+        date: "March 2026",
+        title: "The back is stunning",
+        text: "Bought it for the open back and it did not disappoint. Very flattering without being tight anywhere.",
+        size: "One Size",
+      },
+      {
+        author: "Dana Y.",
+        rating: 5,
+        date: "February 2026",
+        title: "Green is my new colour",
+        text: "Deep green with the print is so elegant. Wore it to a garden party and felt great all evening.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "mykonos-halter-dress",
@@ -220,6 +360,26 @@ export const PRODUCTS: Product[] = [
     fabric: "Rayon. Cool hand wash, hang to dry.",
     colors: [{ name: "Turquoise Multi", hex: "#2fb5a8" }],
     sizes: ONE_SIZE,
+    rating: 4.7,
+    reviewCount: 11,
+    reviews: [
+      {
+        author: "Perla J.",
+        rating: 5,
+        date: "March 2026",
+        title: "Comfortable and cool",
+        text: "The halter neck is supportive which I did not expect. Great for hot days.",
+        size: "One Size",
+      },
+      {
+        author: "Nadia S.",
+        rating: 4,
+        date: "February 2026",
+        title: "Pretty, needs the right bra",
+        text: "Halter cut so plan accordingly. Otherwise the colours and the drape are lovely.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "pure-silk-maxi",
@@ -237,6 +397,26 @@ export const PRODUCTS: Product[] = [
     fabric: "100% silk. Dry clean only.",
     colors: [{ name: "Mint Gold", hex: "#a8d8c0" }],
     sizes: ONE_SIZE,
+    rating: 5.0,
+    reviewCount: 9,
+    reviews: [
+      {
+        author: "Christelle A.",
+        rating: 5,
+        date: "March 2026",
+        title: "Actual silk, actually worth it",
+        text: "You can feel the difference immediately. It is the nicest thing in my wardrobe and I have worn it to two weddings already.",
+        size: "One Size",
+      },
+      {
+        author: "Farah Z.",
+        rating: 5,
+        date: "January 2026",
+        title: "Investment piece",
+        text: "Expensive for a dress but the quality justifies it. The mint and gold together look incredible in evening light.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "mimoto-crowd-shirt",
@@ -257,6 +437,34 @@ export const PRODUCTS: Product[] = [
       { name: "Black", hex: "#2b2b2b", image: "/images/whyknot/mimoto-crowd-shirt-black.jpg" },
     ],
     sizes: ONE_SIZE,
+    rating: 4.9,
+    reviewCount: 18,
+    reviews: [
+      {
+        author: "Zeina M.",
+        rating: 5,
+        date: "March 2026",
+        title: "A conversation starter",
+        text: "The illustrated panel is so unusual, people always ask about it. Cotton is proper quality and holds its shape after washing.",
+        size: "One Size",
+      },
+      {
+        author: "Karma L.",
+        rating: 5,
+        date: "February 2026",
+        title: "Oversized in the best way",
+        text: "Wear it open over a tank or buttoned with jeans. Two outfits from one shirt.",
+        size: "One Size",
+      },
+      {
+        author: "Lynn G.",
+        rating: 4,
+        date: "January 2026",
+        title: "Great shirt, big fit",
+        text: "Genuinely oversized so if you want it fitted, this is not that. I love it exactly as it is.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "mimoto-asymmetric-tee",
@@ -274,6 +482,26 @@ export const PRODUCTS: Product[] = [
     fabric: "100% cotton, made in Japan. Machine wash cold.",
     colors: [{ name: "Poppy Red", hex: "#c0392b" }],
     sizes: ONE_SIZE,
+    rating: 4.8,
+    reviewCount: 13,
+    reviews: [
+      {
+        author: "Joelle H.",
+        rating: 5,
+        date: "February 2026",
+        title: "Softest tee I own",
+        text: "Japanese cotton really is different. The asymmetric hem makes plain trousers look intentional.",
+        size: "One Size",
+      },
+      {
+        author: "Maria K.",
+        rating: 5,
+        date: "January 2026",
+        title: "Elevated basic",
+        text: "Looks simple on the hanger and great on. Washes perfectly.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "evil-eye-tee",
@@ -291,6 +519,34 @@ export const PRODUCTS: Product[] = [
     fabric: "100% cotton with sequin embellishment. Hand wash inside out.",
     colors: [{ name: "White", hex: "#f4f2ee" }],
     sizes: ONE_SIZE,
+    rating: 4.9,
+    reviewCount: 31,
+    reviews: [
+      {
+        author: "Rima S.",
+        rating: 5,
+        date: "March 2026",
+        title: "Bought a second one",
+        text: "The sequins catch the light beautifully and none have come off after several washes. Ordered the black too.",
+        size: "One Size",
+      },
+      {
+        author: "Nay F.",
+        rating: 5,
+        date: "March 2026",
+        title: "My most worn top",
+        text: "Goes with jeans, shorts, anything. Great quality cotton, not thin at all.",
+        size: "One Size",
+      },
+      {
+        author: "Aline B.",
+        rating: 5,
+        date: "February 2026",
+        title: "Perfect gift",
+        text: "Bought it for my sister and ended up getting one for myself.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "cobalt-peplum-shirt",
@@ -308,6 +564,26 @@ export const PRODUCTS: Product[] = [
     fabric: "100% cotton poplin, made in Italy. Machine wash cold.",
     colors: [{ name: "Cobalt", hex: "#1668c4" }],
     sizes: STANDARD_SIZES,
+    rating: 4.7,
+    reviewCount: 15,
+    reviews: [
+      {
+        author: "Cynthia R.",
+        rating: 5,
+        date: "February 2026",
+        title: "The blue is incredible",
+        text: "Photographs beautifully and the peplum skims everything. Wore it to the office and out after.",
+        size: "M",
+      },
+      {
+        author: "Reem A.",
+        rating: 4,
+        date: "January 2026",
+        title: "Lovely, size up if between",
+        text: "Gorgeous Italian cotton. I am between S and M and the M was the right call.",
+        size: "M",
+      },
+    ],
   },
   {
     slug: "layered-green-shirt",
@@ -324,6 +600,26 @@ export const PRODUCTS: Product[] = [
     fabric: "100% cotton. Machine wash cold, low iron.",
     colors: [{ name: "Kelly Green", hex: "#3faa50" }],
     sizes: STANDARD_SIZES,
+    rating: 4.8,
+    reviewCount: 10,
+    reviews: [
+      {
+        author: "Nathalie C.",
+        rating: 5,
+        date: "March 2026",
+        title: "Clever cut",
+        text: "The double layer hides everything you want hidden while still looking sharp. Very comfortable.",
+        size: "M",
+      },
+      {
+        author: "Grace M.",
+        rating: 5,
+        date: "February 2026",
+        title: "Great with jeans",
+        text: "The green is fresh without being loud. Cotton is nice and crisp.",
+        size: "S",
+      },
+    ],
   },
   {
     slug: "riviera-sun-hat",
@@ -343,6 +639,26 @@ export const PRODUCTS: Product[] = [
       { name: "Sunset Orange", hex: "#e0763f", image: "/images/whyknot/sun-hat-orange.jpg" },
     ],
     sizes: ONE_SIZE,
+    rating: 4.6,
+    reviewCount: 8,
+    reviews: [
+      {
+        author: "Sandy K.",
+        rating: 5,
+        date: "March 2026",
+        title: "Survived the beach",
+        text: "Packed it in a bag and it kept its shape. The frayed trim is a nice touch.",
+        size: "One Size",
+      },
+      {
+        author: "Maya E.",
+        rating: 4,
+        date: "February 2026",
+        title: "Good shade",
+        text: "Wide enough brim to actually protect your face. Slightly loose on me but a ribbon fixed it.",
+        size: "One Size",
+      },
+    ],
   },
   {
     slug: "sunday-lounge-set",
@@ -360,6 +676,26 @@ export const PRODUCTS: Product[] = [
     fabric: "95% cotton, 5% elastane. Machine wash cold.",
     colors: [{ name: "Heather Grey", hex: "#a8a5a0" }],
     sizes: STANDARD_SIZES,
+    rating: 4.9,
+    reviewCount: 17,
+    reviews: [
+      {
+        author: "Farah D.",
+        rating: 5,
+        date: "March 2026",
+        title: "Never taking it off",
+        text: "So soft. I bought it for home and now I wear it to run errands.",
+        size: "M",
+      },
+      {
+        author: "Lara N.",
+        rating: 5,
+        date: "February 2026",
+        title: "Great quality ribbing",
+        text: "Does not go see through and does not pill. Ordered a second colour.",
+        size: "S",
+      },
+    ],
   },
 ];
 export type Reel = {

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PRODUCTS, waLink } from "@/lib/content";
 import { WhatsAppIcon } from "@/components/icons";
+import { RatingSummary } from "@/components/sections/Reviews";
 
 const TABS = ["All", "New In", "Dresses", "Tops", "Accessories"] as const;
 
@@ -72,7 +73,10 @@ export function ProductGrid() {
                   {p.name}
                 </Link>
               </h3>
-              <div className="flex items-center justify-center gap-2 mt-1">
+              <div className="flex justify-center mt-1.5">
+                <RatingSummary rating={p.rating} reviewCount={p.reviewCount} />
+              </div>
+              <div className="flex items-center justify-center gap-2 mt-1.5">
                 {p.compareAtPrice ? (
                   <span className="text-[12.5px] line-through opacity-45">{p.compareAtPrice}</span>
                 ) : null}

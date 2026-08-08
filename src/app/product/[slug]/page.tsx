@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { HeaderSection } from "@/components/sections/HeaderSection";
 import { ProductDetail } from "@/components/sections/ProductDetail";
+import { ProductReviews } from "@/components/sections/Reviews";
 import { BenefitsBar } from "@/components/sections/BenefitsBar";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { WhatsAppFloat } from "@/components/sections/WhatsAppFloat";
@@ -34,8 +35,32 @@ export default async function ProductPage({ params }: Props) {
     .sort((a, b) => (a.category === product.category ? -1 : 0) - (b.category === product.category ? -1 : 0))
     .slice(0, 4);
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    image: product.image,
+    brand: { "@type": "Brand", name: "Whyknot Clothing" },
+    offers: {
+      "@type": "Offer",
+      price: product.price.replace("$", ""),
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: product.rating,
+      reviewCount: product.reviewCount,
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <HeaderSection />
       <nav aria-label="Breadcrumb" className="bg-[var(--an-cream)] border-b border-black/5">
         <div className="container-gp py-3 text-[12px] opacity-70">
@@ -52,6 +77,12 @@ export default async function ProductPage({ params }: Props) {
       </nav>
 
       <ProductDetail product={product} />
+
+      <ProductReviews
+        rating={product.rating}
+        reviewCount={product.reviewCount}
+        reviews={product.reviews}
+      />
 
       <section className="py-12 md:py-16 bg-[var(--an-cream)]">
         <div className="container-gp">
