@@ -160,6 +160,12 @@
 @layer utilities {
   .font-display {
     font-family: var(--font-cormorant), serif;
+    /* SOFT + WONK round the terminals so headings echo the chunky wordmark */
+    font-variation-settings:
+      "SOFT" 100,
+      "WONK" 1,
+      "opsz" 144;
+    letter-spacing: -0.005em;
   }
 
   /* GP-style section heading: uppercase, centered, medium weight */

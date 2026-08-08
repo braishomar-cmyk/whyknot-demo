@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Poppins } from "next/font/google";
+import { DM_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import { BUSINESS_NAME, FAQS, INSTAGRAM_URL, LOCATION, WHATSAPP_NUMBER } from "@/lib/content";
 
@@ -8,13 +8,13 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   weight: "variable",
   style: ["normal", "italic"],
-  axes: ["SOFT"],
+  axes: ["SOFT", "WONK", "opsz"],
 });
 
-const poppins = Poppins({
+const dmSans = DM_Sans({
   variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -72,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${poppins.variable} h-full antialiased`}>
+    <html lang="en" className={`${fraunces.variable} ${dmSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
